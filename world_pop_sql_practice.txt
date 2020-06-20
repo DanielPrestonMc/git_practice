@@ -2,7 +2,7 @@ SELECT COUNT(*)
 FROM countries
 WHERE continent = "Africa";
 
-56
+# 56
 
 SELECT c.continent, py.year, SUM(py.population)
 FROM countries c
@@ -11,7 +11,7 @@ JOIN population_years py
 WHERE year = 2005
 	AND c.continent = "Oceania";
 
-Oceania	2005	32.66417
+# Oceania - 2005 - 32.66417
 
 SELECT c.continent, py.year, AVG(py.population)
 FROM countries c
@@ -20,7 +20,7 @@ JOIN population_years py
 WHERE year = 2003
 	AND c.continent = "South America";
 
-South America	2003	25.8906514285714
+# South America - 2003 - 25.8906514285714
 
 SELECT c.name, py.year, MIN(py.population)
 FROM countries c
@@ -28,7 +28,7 @@ JOIN population_years py
 	ON c.id = py.country_id
 WHERE year = 2007;
 
-Niue	2007	0.00216
+# Niue - 2007 - 0.00216
 
 SELECT c.name, AVG(py.population)
 FROM countries c
@@ -36,14 +36,14 @@ JOIN population_years py
 	ON c.id = py.country_id
 WHERE c.name = "Poland";
 
-Poland	38.5606790909091
+# Poland - 38.5606790909091
 
 SELECT COUNT(*)
 FROM countries
 WHERE name LIKE "%The"
 	OR name LIKE "The%";
 
-2
+# 2
 
 SELECT c.continent, SUM(py.population)
 FROM countries c
@@ -53,9 +53,9 @@ WHERE py.year = 2010
 GROUP BY c.continent
 ORDER BY SUM(py.population) DESC;
 
-Asia	4133.09148
-Africa	1015.47846
-Europe	723.06044
-North America	539.79456
-South America	396.58235
-Oceania	34.95696
+# Asia - 4133.09148
+Africa - 1015.47846
+Europe - 723.06044
+North America - 539.79456
+South America - 396.58235
+Oceania - 34.95696
